@@ -1,0 +1,11 @@
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\bin\Debug\SupPorts_V2.exe.config
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\bin\Debug\SupPorts_V2.exe
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\bin\Debug\SupPorts_V2.pdb
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\obj\Debug\SupPorts_V2.csproj.AssemblyReference.cache
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\obj\Debug\SupPorts_V2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\obj\Debug\SupPorts_V2.SupPorts.resources
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\obj\Debug\SupPorts_V2.Properties.Resources.resources
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\obj\Debug\SupPorts_V2.csproj.GenerateResource.cache
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\obj\Debug\SupPorts_V2.csproj.CoreCompileInputs.cache
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\obj\Debug\SupPorts_V2.exe
+C:\Users\Shir Alfasi\source\repos\SupPorts_V2\SupPorts_V2\obj\Debug\SupPorts_V2.pdb
