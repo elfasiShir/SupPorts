@@ -32,7 +32,8 @@
             this.IpInput = new System.Windows.Forms.TextBox();
             this.labelOutput = new System.Windows.Forms.Label();
             this.IpInputHeader = new System.Windows.Forms.Label();
-            this.IpThreadManager = new System.ComponentModel.BackgroundWorker();
+            this.ipThreadManager = new System.ComponentModel.BackgroundWorker();
+            this.portFinderWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // FindPorts
@@ -47,7 +48,7 @@
             // 
             // IpInput
             // 
-            this.IpInput.Location = new System.Drawing.Point(0, 96);
+            this.IpInput.Location = new System.Drawing.Point(0, 77);
             this.IpInput.Name = "IpInput";
             this.IpInput.Size = new System.Drawing.Size(131, 20);
             this.IpInput.TabIndex = 1;
@@ -56,25 +57,32 @@
             // labelOutput
             // 
             this.labelOutput.AutoSize = true;
-            this.labelOutput.Location = new System.Drawing.Point(361, 26);
+            this.labelOutput.Location = new System.Drawing.Point(225, 13);
             this.labelOutput.Name = "labelOutput";
-            this.labelOutput.Size = new System.Drawing.Size(62, 13);
+            this.labelOutput.Size = new System.Drawing.Size(42, 13);
             this.labelOutput.TabIndex = 2;
-            this.labelOutput.Text = "label output";
+            this.labelOutput.Text = "Output:";
             // 
             // IpInputHeader
             // 
             this.IpInputHeader.AutoSize = true;
-            this.IpInputHeader.Location = new System.Drawing.Point(-3, 80);
+            this.IpInputHeader.Location = new System.Drawing.Point(-3, 61);
             this.IpInputHeader.Name = "IpInputHeader";
             this.IpInputHeader.Size = new System.Drawing.Size(46, 13);
             this.IpInputHeader.TabIndex = 3;
             this.IpInputHeader.Text = "Enter ip:";
             this.IpInputHeader.Click += new System.EventHandler(this.IpInputHeader_Click);
             // 
-            // IpThreadManager
+            // ipThreadManager
             // 
-            this.IpThreadManager.DoWork += new System.ComponentModel.DoWorkEventHandler(this.IpThreadManager_DoWork);
+            this.ipThreadManager.DoWork += new System.ComponentModel.DoWorkEventHandler(this.IpThreadManager_DoWork);
+            this.ipThreadManager.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.IpThreadManager_ProgressChanged);
+            // 
+            // portFinderWorker
+            // 
+            this.portFinderWorker.WorkerReportsProgress = true;
+            this.portFinderWorker.WorkerSupportsCancellation = true;
+            this.portFinderWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.portFinderWorker_DoWork);
             // 
             // SupPorts
             // 
@@ -99,7 +107,8 @@
         private System.Windows.Forms.TextBox IpInput;
         private System.Windows.Forms.Label labelOutput;
         private System.Windows.Forms.Label IpInputHeader;
-        private System.ComponentModel.BackgroundWorker IpThreadManager;
+        private System.ComponentModel.BackgroundWorker ipThreadManager;
+        private System.ComponentModel.BackgroundWorker portFinderWorker;
     }
 }
 
