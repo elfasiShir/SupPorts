@@ -33,7 +33,6 @@
             this.labelOutput = new System.Windows.Forms.Label();
             this.IpInputHeader = new System.Windows.Forms.Label();
             this.ipThreadManager = new System.ComponentModel.BackgroundWorker();
-            this.portFinderWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // FindPorts
@@ -62,6 +61,7 @@
             this.labelOutput.Size = new System.Drawing.Size(42, 13);
             this.labelOutput.TabIndex = 2;
             this.labelOutput.Text = "Output:";
+            this.labelOutput.Click += new System.EventHandler(this.labelOutput_Click);
             // 
             // IpInputHeader
             // 
@@ -77,12 +77,6 @@
             // 
             this.ipThreadManager.DoWork += new System.ComponentModel.DoWorkEventHandler(this.IpThreadManager_DoWork);
             this.ipThreadManager.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.IpThreadManager_ProgressChanged);
-            // 
-            // portFinderWorker
-            // 
-            this.portFinderWorker.WorkerReportsProgress = true;
-            this.portFinderWorker.WorkerSupportsCancellation = true;
-            this.portFinderWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.portFinderWorker_DoWork);
             // 
             // SupPorts
             // 
@@ -108,7 +102,6 @@
         private System.Windows.Forms.Label labelOutput;
         private System.Windows.Forms.Label IpInputHeader;
         private System.ComponentModel.BackgroundWorker ipThreadManager;
-        private System.ComponentModel.BackgroundWorker portFinderWorker;
     }
 }
 
